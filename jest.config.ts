@@ -2,6 +2,15 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
+import type {Config} from '@jest/types';
+// Sync object
+const config: Config.InitialOptions = {
+  verbose: true,
+  transform: {
+  "^.+\\.tsx?$": "ts-jest",
+  },
+};
+export default config;
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
